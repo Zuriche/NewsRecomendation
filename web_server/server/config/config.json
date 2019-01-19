@@ -1,0 +1,5 @@
+{
+    "mongoDbUri": "mongodb://abc:abc123@ds064188.mlab.com:64188/project_news_recommendation",
+    "jwtSecret": "a secret phrase!!"
+
+}
