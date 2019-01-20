@@ -24,10 +24,6 @@ class SignUpPage extends React.Component {
         const password = this.state.user.password;
         const confirm_password = this.state.user.confirm_password;
 
-        console.log('email', email);
-        console.log('password', password);
-        console.log('confirm_password', confirm_password);
-
 
         // post signup data
         const url = 'http://' + window.location.hostname + ':3000' + '/auth/signup';

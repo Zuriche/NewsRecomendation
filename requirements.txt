@@ -1,10 +1,10 @@
 jsonrpclib-pelix
 newspaper3k
-numpy
+numpy==1.14.3
 pymongo
 python-dateutil
 pika
 redis
 requests
 scipy
-sklearn
+sklearn==0.0
