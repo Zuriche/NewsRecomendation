@@ -10,18 +10,17 @@ import news_api_client
 from cloudAMQP_client import CloudAMQPClient
 
 NEWS_SOURCES = [
-    'financial-times',
-    # 'bbc-news',
-    # 'bbc-sport',
-    # 'bloomberg',
-    # 'cnn',
-    # 'entertainment-weekly',
-    # 'espn',
-    # 'ign',
-    # 'techcrunch',
-    # 'the-new-york-times',
-    # 'the-wall-street-journal',
-    # 'the-washington-post'
+    'bbc-news',
+    'bbc-sport',
+    'bloomberg',
+    'cnn',
+    'entertainment-weekly',
+    'espn',
+    'ign',
+    'techcrunch',
+    'the-new-york-times',
+    'the-wall-street-journal',
+    'the-washington-post'
 ]
 
 SLEEP_TIME_IN_SECONDS = 10
