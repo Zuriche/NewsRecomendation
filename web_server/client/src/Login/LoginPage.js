@@ -25,8 +25,6 @@ class LoginPage extends React.Component {
         const email = this.state.user.email;
         const password = this.state.user.password;
 
-        console.log('email', email);
-        console.log('password', password);
         // post login data
         const url = 'http://' + window.location.hostname + ':3000' + '/auth/login';
         const request = new Request(

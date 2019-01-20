@@ -3,7 +3,6 @@
 
 # build
 [Oo]bj/
-[Bb]in/
 packages/
 TestResults/
 
@@ -48,4 +47,3 @@ Thumbs.db
 
 #dump.rdb
 *.rdb
-
