@@ -3,7 +3,6 @@ import hashlib
 import os
 import redis
 import sys
-import time
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'common'))
 
@@ -24,9 +23,8 @@ NEWS_SOURCES = [
     'the-washington-post'
 ]
 
-SLEEP_TIME_IN_SECONDS = 10
+SLEEP_TIME_IN_SECONDS = 100
 NEWS_TIME_OUT_IN_SECONDS = 3600 * 24 * 3
-NEWS_REQUEST_TIME_IN_SECONDS = 3600
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
@@ -65,8 +63,6 @@ def run():
 
         cloudAMQP_client.sleep(SLEEP_TIME_IN_SECONDS)
 
-        # Send a Get_News Request every hour
-        time.sleep(NEWS_REQUEST_TIME_IN_SECONDS)
 
 
 
