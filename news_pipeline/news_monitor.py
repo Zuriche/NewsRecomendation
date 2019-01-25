@@ -20,6 +20,7 @@ NEWS_SOURCES = [
     'ign',
     'techcrunch',
     'the-new-york-times',
+    "the-verge",
     'the-wall-street-journal',
     'the-washington-post'
 ]
