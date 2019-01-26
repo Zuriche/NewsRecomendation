@@ -14,7 +14,7 @@ from cloudAMQP_client import CloudAMQPClient
 DEDUPE_NEWS_TASK_QUEUE_URL = 'amqp://vncziqbi:7XOiPBEJqZHs8Q2IaZOLu8372CrgoJKL@caterpillar.rmq.cloudamqp.com/vncziqbi'
 DEDUPE_NEWS_TASK_QUEUE_NAME = 'news-recommendation-dedupe-news-task-queue'
 
-SLEEP_TIME_IN_SECONDS = 1
+SLEEP_TIME_IN_SECONDS = 10
 
 NEWS_TABLE_NAME = "news"
 
