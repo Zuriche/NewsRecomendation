@@ -64,7 +64,7 @@ def run():
 
         print("Fetched %d news." % num_of_new_news)
 
-        # cloudAMQP_client.sleep(SLEEP_TIME_IN_SECONDS)
+        cloudAMQP_client.sleep(SLEEP_TIME_IN_SECONDS)
 
         # Send a Get_News Request every hour
         time.sleep(NEWS_REQUEST_TIME_IN_SECONDS)
