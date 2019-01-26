@@ -2,7 +2,8 @@ import requests
 from json import loads
 
 NEWS_API_ENDPOINT = 'https://newsapi.org/v1/'
-NEWS_API_KEY = '58ec8830d33e4f5c9c7d9c038eabe647'
+NEWS_API_KEY1 = '58ec8830d33e4f5c9c7d9c038eabe647'
+NEWS_API_KEY2 = 'fb634df46c6941c7b53826768d98b927'
 
 ARTICLES_API = 'articles'
 
@@ -18,10 +19,16 @@ def getNewsFromSources(sources=DEFAULT_SOURCES, sortBy=SORT_BY_TOP):
     articles = []
 
     for source in sources:
-        payload = {'apiKey': NEWS_API_KEY,
+        payload1 = {'apiKey': NEWS_API_KEY1,
                     'source': source,
                     'sortBy': sortBy}
-        response = requests.get(_buildUrl(), params=payload)
+        payload2 = {'apiKey': NEWS_API_KEY2,
+                    'source': source,
+                    'sortBy': sortBy}
+        response = requests.get(_buildUrl(), params=payload1)
+        if(response.status_code == 429):
+            response = requests.get(_buildUrl(), params=payload2)
+
         res_json = loads(response.content.decode('utf-8'))
         if(res_json is not None and
             res_json['status'] == 'ok' and
@@ -32,3 +39,6 @@ def getNewsFromSources(sources=DEFAULT_SOURCES, sortBy=SORT_BY_TOP):
 
             articles.extend(res_json['articles'])
     return articles
+
+if __name__ == "__main__":
+    getNewsFromSources()
